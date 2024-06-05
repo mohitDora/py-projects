@@ -1,13 +1,13 @@
-import kafka
+import kafka3
 import json
 import time
 
 # Kafka configuration details
-bootstrap_servers = 'kafka-lift-off-mohitdora21.l.aivencloud.com:18482'  # Replace with your Kafka broker(s)
+bootstrap_servers = 'localhost:9092'  # Replace with your Kafka broker(s)
 topic_name = 'my_topic'
 
 # SSL context for the connection
-producer = kafka.KafkaProducer(
+producer = kafka3.KafkaProducer(
     bootstrap_servers=bootstrap_servers,
     security_protocol='SSL',
     ssl_cafile='./ca.pem',

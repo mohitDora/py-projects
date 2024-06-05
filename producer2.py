@@ -4,11 +4,7 @@ import json
 
 # Configuration settings
 conf = {
-    'bootstrap.servers': 'kafka-lift-off-mohitdora21.l.aivencloud.com:18482',
-    'security.protocol': 'SSL',
-    'ssl.ca.location': './ca.pem',
-    'ssl.certificate.location': './service.cert',
-    'ssl.key.location': './service.key',
+    'bootstrap.servers': 'localhost:9092',   
 }
 
 # Create Producer instance
@@ -37,4 +33,3 @@ for i in range(10):
 
 # Wait for any outstanding messages to be delivered and delivery report
 producer.flush()
-input()
