@@ -1,6 +1,8 @@
 from confluent_kafka import Consumer, KafkaException, KafkaError
 import json
 from pathlib import Path
+import pandas as pd
+import matplotlib.pyplot as plt
 
 #reading json file
 # home_dir=Path.home()

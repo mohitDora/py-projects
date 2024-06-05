@@ -1,4 +1,4 @@
-import kafka3
+import kafka
 import json
 import time
 
@@ -7,7 +7,7 @@ bootstrap_servers = 'localhost:9092'  # Replace with your Kafka broker(s)
 topic_name = 'my_topic'
 
 # SSL context for the connection
-producer = kafka3.KafkaProducer(
+producer = kafka.KafkaProducer(
     bootstrap_servers=bootstrap_servers,
     security_protocol='SSL',
     ssl_cafile='./ca.pem',
