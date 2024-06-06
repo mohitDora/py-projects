@@ -46,7 +46,7 @@ def delivery_report(err, msg):
 # Produce 10 messages with a 1-second interval
 for i in range(10):
     data = generate_sample_data()
-    producer.produce('my_topic', key=f'key{i}'.encode('utf-8'), value=json.dumps(data).encode('utf-8'), callback=delivery_report)
+    producer.produce('data', key=f'key{i}'.encode('utf-8'), value=json.dumps(data).encode('utf-8'), callback=delivery_report)
     # Wait up to 1 second for events. Callbacks will be invoked during
     # this method call if the message is delivered or failed.
     producer.poll(1)
